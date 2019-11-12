@@ -25,7 +25,7 @@ Things you may want to cover:
 
 # Setup
 ## Installing Ruby
-```bash
+```sh
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install rbenv ruby-build
 
@@ -40,7 +40,7 @@ ruby -v
 ```
 
 ## Installing Rails
-```bash
+```sh
 # gem is a package manager for Ruby
 gem install rails -v 6.0.0
 
@@ -51,18 +51,30 @@ rails -v # should output Rails 6.0.0
 ```
 
 ## Setting Up A Database
-```bash
+```sh
 # Rails ships with sqlite3 as the default database
+# This will only be used locally
 brew install sqlite3
+
+# For production we will be using Postgres
+brew install postgresql
+# To have launchd start postgresql at login:
+brew services start postgresql
 ```
 
 ## Final Steps
-```bash
+```sh
 # Mojave changed the location of header files necessary for compiling C extensions. You might need to run the following command to install pg, nokogiri, or other gems that require C extensions
 sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
 ```
 
 # Starting up the Rails server
-```bash
+```sh
 bin/rails s -p 3001
 ```
+Local host: http://localhost:3001/
+Local admin host: http://localhost:3001/admin (user: admin@example.com, pw: password)
+
+# Resources
+https://gorails.com/setup/osx/10.14-mojave
+https://blog.heroku.com/a-rock-solid-modern-web-stack
