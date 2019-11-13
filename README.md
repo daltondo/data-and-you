@@ -73,8 +73,16 @@ sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_heade
 bin/rails s -p 3001
 ```
 Local host: http://localhost:3001/
+
 Local admin host: http://localhost:3001/admin (user: admin@example.com, pw: password)
+
+# Starting up the React App
+```sh
+cd client
+yarn --cwd client start
+```
 
 # Resources
 https://gorails.com/setup/osx/10.14-mojave
+
 https://blog.heroku.com/a-rock-solid-modern-web-stack
