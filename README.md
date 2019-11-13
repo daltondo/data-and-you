@@ -40,7 +40,7 @@ ruby -v
 ```
 
 ## Installing Rails
-```sh
+```s
 # gem is a package manager for Ruby
 gem install rails -v 6.0.0
 
@@ -48,6 +48,11 @@ gem install rails -v 6.0.0
 rbenv rehash
 
 rails -v # should output Rails 6.0.0
+```
+
+## Installing Heroku
+```sh
+brew tap heroku/brew && brew install heroku
 ```
 
 ## Setting Up A Database
@@ -79,7 +84,14 @@ Local admin host: http://localhost:3001/admin (user: admin@example.com, pw: pass
 # Starting up the React App
 ```sh
 cd client
+yarn --cwd client add semantic-ui-react semantic-ui-css # only need to run once
 yarn --cwd client start
+```
+Frontend app: http://localhost:3000
+
+# Starting up the dev env
+```sh
+bin/rake start
 ```
 
 # Resources
