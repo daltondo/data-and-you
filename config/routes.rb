@@ -8,4 +8,9 @@ Rails.application.routes.draw do
   scope '/api' do
     resources :drinks
   end
+
+  # passes anything that doesn't match over to client/index.html
+  get '*path', to: "application#fallback_index_html", constraints: ->(request) do
+    !request.xhr? && request.format.html?
+  end
 end

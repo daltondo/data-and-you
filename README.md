@@ -94,6 +94,17 @@ Frontend app: http://localhost:3000
 bin/rake start
 ```
 
+# Using Heroku
+```sh
+# when you want to push new changes to Heroku
+git add .
+git commit -vam "Initial commit"
+git push heroku master
+
+heroku run rake db:seed # seed database on Heroku
+heroku open
+```
+
 # Resources
 https://gorails.com/setup/osx/10.14-mojave
 
