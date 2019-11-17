@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Header, Segment, Button, Icon, Dimmer, Loader, Divider } from 'semantic-ui-react'
+import { introduction } from '../text/Introduction.json'
 
 export interface IntroProps {
 
@@ -23,7 +24,7 @@ export class IntroVc extends React.Component<IntroProps, IntroState> {
                 <Container text>
                     <Header as='h3'>Introduction</Header>
                     <Container text>
-                        blah blah blah
+                        {introduction}
                     </Container>
                 </Container>
             </div>
